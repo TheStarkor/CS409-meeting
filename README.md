@@ -1,13 +1,13 @@
 # outdoor-3d-pose
 
-## Getting Started
-### SPIN demo
-Prerequisite
+## SPIN demo
+### Prerequisite
 - nvidia GPU & appropriate driver
 - [cuda](https://developer.nvidia.com/cuda-toolkit)
 - [Docker](https://www.docker.com/)
 - [Nvidia-docker](https://github.com/NVIDIA/nvidia-docker)
 
+### Run
 ```
 $ docker pull chaneyk/spin
 $ docker run -it --gpus all --rm -v ${PWD}:/home chaneyk/spin
