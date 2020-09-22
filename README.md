@@ -1,6 +1,7 @@
 # outdoor-3d-pose
 
 ## SPIN demo
+[docu](https://github.com/TheStarkor/outdoor-3d-pose/blob/master/docs/run_SPIN.md)
 ### Prerequisite
 - nvidia GPU & appropriate driver
 - [cuda](https://developer.nvidia.com/cuda-toolkit)
