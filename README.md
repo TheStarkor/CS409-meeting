@@ -20,3 +20,4 @@ $ cd outdoor-3d-pose/demo && ./run_SPIN.sh
 ![image](https://user-images.githubusercontent.com/45455072/93908460-9ac84200-fd39-11ea-96a6-dcf6dab64d92.png)
 ![image](https://user-images.githubusercontent.com/45455072/93911855-ee3c8f00-fd3d-11ea-9ca9-e8bdff1abadd.png)
 ![image](https://user-images.githubusercontent.com/45455072/93911387-48892000-fd3d-11ea-996b-310c632f7f94.png)
+![image](https://user-images.githubusercontent.com/45455072/93912340-95b9c180-fd3e-11ea-99b7-a7a919ade87d.png)
