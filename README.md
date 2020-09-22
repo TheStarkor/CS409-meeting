@@ -13,6 +13,5 @@ $ docker pull chaneyk/spin
 $ docker run -it --gpus all --rm -v ${PWD}:/home chaneyk/spin
 // docker running!
 $ git clone https://github.com/TheStarkor/outdoor-3d-pose.git
-$ cd outdoor-3d-pose/demo
-$ ./run_SPIN.sh
+$ cd outdoor-3d-pose/demo && ./run_SPIN.sh
 ```
