@@ -5,7 +5,7 @@
 - [SMPLify](http://smplify.is.tue.mpg.de/)
 - [smplx](https://github.com/vchoutas/smplx)
 
-## Start
+## Process
 1. docker 실행 후 requirements 설치
     - pytorch 버전 업데이트
 2. SMPL 모델 다운로드
@@ -18,17 +18,18 @@
 ![image](https://user-images.githubusercontent.com/45455072/93907716-aa935680-fd38-11ea-80b7-3973018d005f.png)
 ![image](https://user-images.githubusercontent.com/45455072/93907777-bda62680-fd38-11ea-9f2b-3019bc139dea.png)
 
-### Prerequisite
+## Prerequisite
 - nvidia GPU & appropriate driver
 - [cuda](https://developer.nvidia.com/cuda-toolkit)
 - [Docker](https://www.docker.com/)
 - [Nvidia-docker](https://github.com/NVIDIA/nvidia-docker)
 
-### `nvidia-smi` 확인
-- host
+### host
 ![image](https://user-images.githubusercontent.com/45455072/93907431-47a1bf80-fd38-11ea-8872-c91bbce46cb4.png)
-- container(nvidia-docker --gpus all option)
+### container(nvidia-docker --gpus all option)
 ![image](https://user-images.githubusercontent.com/45455072/93907518-62743400-fd38-11ea-868f-eaff53631951.png)
+
+## Run
 
 ### docker 실행 후 requirements 설치
 ```
