@@ -91,3 +91,24 @@ $ ./run_SPIN.sh
 ![image](https://user-images.githubusercontent.com/45455072/93907329-280a9700-fd38-11ea-8b30-60266d9ce59f.png)
 ![image](https://user-images.githubusercontent.com/45455072/93908392-84ba8180-fd39-11ea-9fc1-e1fd88c86fea.png)
 ![image](https://user-images.githubusercontent.com/45455072/93908460-9ac84200-fd39-11ea-96a6-dcf6dab64d92.png)
+
+## Own data set
+
+- in SPIN directory
+```
+$ cp /home/<image> examples/
+$ python3 demo.py --checkpoint=data/model_checkpoint.pt --img=examples/<image>
+$ cp -r examples/*.png /home
+```
+
+### Baseball
+![image](https://user-images.githubusercontent.com/45455072/93911359-41621200-fd3d-11ea-99de-b97fb0f46e34.png)
+![image](https://user-images.githubusercontent.com/45455072/93911387-48892000-fd3d-11ea-996b-310c632f7f94.png)
+
+### Golf
+- 사람 인식을 못해서 실패한 것으로 예상
+![image](https://user-images.githubusercontent.com/45455072/93911886-f8f72400-fd3d-11ea-8239-e7e5e8f336c3.png)
+![image](https://user-images.githubusercontent.com/45455072/93911855-ee3c8f00-fd3d-11ea-9ca9-e8bdff1abadd.png)
+
+### common
+![image](https://user-images.githubusercontent.com/45455072/93912340-95b9c180-fd3e-11ea-99b7-a7a919ade87d.png)
