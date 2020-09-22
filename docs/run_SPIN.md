@@ -15,7 +15,8 @@
 4. demo 실행
 
 ## Errors
-October 2020 이후에 에러가 발생하는 것 같으므로 수정 해야 할 것 같음
+- October 2020 이후에 에러가 발생하는 것 같으므로 수정 해야 할 것 같음
+
 ![image](https://user-images.githubusercontent.com/45455072/93907716-aa935680-fd38-11ea-80b7-3973018d005f.png)
 ![image](https://user-images.githubusercontent.com/45455072/93907777-bda62680-fd38-11ea-9f2b-3019bc139dea.png)
 
