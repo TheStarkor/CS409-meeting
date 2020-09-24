@@ -1,7 +1,5 @@
 # run SPIN
 
-## Comments
-
 ## Process
 1. docker 실행 후 requirements 설치([SPIN](https://github.com/nkolot/SPIN) 에서 제공)
     - pytorch 는 버전 문제로 에러 발생하여 새로 업데이트
@@ -85,7 +83,7 @@ $ docker pull chaneyk/spin
 $ docker run -it --gpus all --rm -v ${PWD}:/home chaneyk/spin
 // docker running!
 $ git clone https://github.com/TheStarkor/CS409-meeting.git
-$ cd outdoor-3d-pose
+$ cd CS409-meeting
 $ ./run_SPIN.sh
 ```
 
