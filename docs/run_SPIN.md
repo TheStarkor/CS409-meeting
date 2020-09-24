@@ -34,7 +34,7 @@
 ## Run
 
 ### docker 실행 후 requirements 설치
-docker 의 경우 --rm 옵션을 주었는데 이후 계속 사용할거면 제거 할 예정이고 tensorboard와 torch 업데이트 해주었음.
+docker 의 경우 일단 --rm 옵션을 주었는데 필요하면 제거하면 될 것 같고 tensorboard와 torch 업데이트 해주었음.
 ```
 $ docker pull chaneyk/spin
 $ docker run -it --gpus all --rm -v ${PWD}:/home chaneyk/spin
@@ -48,7 +48,7 @@ $ pip install --upgrade tensorboard && pip install --upgrade torch
 ```
 
 ### SMPL 모델 다운로드
-[SMPLify](http://smplify.is.tue.mpg.de/) 회원가입 후 모델 다운로드 이후 `.pkl` 파일명 변경 (smplx에 설명된 [구조](https://github.com/vchoutas/smplx#model-loading)에 맞춰 변경 하였음(SMPL_NUTRAL.pkl))
+[SMPLify](http://smplify.is.tue.mpg.de/) 회원가입 후 모델 다운로드 이후 `.pkl` 파일명 변경 (smplx에 설명된 [구조](https://github.com/vchoutas/smplx#model-loading)(SMPL_NUTRAL.pkl)에 맞춰 변경 하였음)
 ```
 $ cd /opt
 $ wget http://smplify.is.tue.mpg.de/main/download1
