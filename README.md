@@ -1,9 +1,9 @@
 # outdoor-3d-pose
 
 ## Documents
-- [weak3](https://github.com/TheStarkor/CS409-meeting/tree/master/docs/week3)
+- [WEEK3](https://github.com/TheStarkor/CS409-meeting/tree/master/docs/week3)
     - SPIN paper review, SPIN demo
-- [weak4](https://github.com/TheStarkor/CS409-meeting/tree/master/docs/week4)
+- [WEEK4](https://github.com/TheStarkor/CS409-meeting/tree/master/docs/week4)
 
 ## SPIN demo
 [More Information](https://github.com/TheStarkor/outdoor-3d-pose/blob/master/docs/run_SPIN.md)
