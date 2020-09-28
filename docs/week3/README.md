@@ -6,7 +6,7 @@
 ## Result
 - [SPIN paper]()
 - [SPIN demo](https://github.com/TheStarkor/CS409-meeting/blob/master/docs/run_SPIN.md)
-- 요청 보내 둔 상태
+- dataset 요청 보내 둔 상태
 
 ## Review
 - metric, loss 좀 더 이해하면 좋지 않을까?
@@ -21,3 +21,7 @@
 - 간소화된 카메라 파라미터 + 체형, 남녀 파라미터 + joint 파라미터
 - 중요한건 joint 이고 hip 만 맞추면 나머지는 다 같아짐
     - 3D 상황에서 이 값을 loss 에 활용해서 정교하게 맞출 수 있을텐데 어떻게 할지?
+
+### dataset
+- 직접 라벨링 해서 쓰기보다는 weakly supervised -> multi-view constraints 방식으로 가는게 좋지 않을까?
+- 최종 평가를 위해서는 GT를 만들거나 weakly supervised 방식의 metric 을 알아두어야 한다.
