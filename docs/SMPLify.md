@@ -63,12 +63,12 @@ Keep it SMPL : Automatic Estimation of 3D Human Pose and Shape from a Single Ima
 3. For each 2D joint *i*, the CNN provides a confidence value, w<sub>i</sub>
 4. Fit 3D body model such that the projected joints of the model minimize a robust weighted error term
 + The body model is defined as a function 
-  $$M(\beta, \theta, \gamma)$$
-  $$\beta : shape\,parameter, \theta : pose\,parameter, \gamma : translation\, parameter$$   
+  $$'''M(\beta, \theta, \gamma)'''$$
+  $$'''\beta : shape\,parameter, \theta : pose\,parameter, \gamma : translation\, parameter'''$$   
   The output is a triangulated surface with 6890 vertices
-+ Shape parameters $\beta$ are coefficients of a low-dimensional shape space, learned from a training set of thousands of registered scans
++ Shape parameters $'\beta'$ are coefficients of a low-dimensional shape space, learned from a training set of thousands of registered scans
 + The pose of body is defined by a skeleton rig with 23 joints   
-  Pose parameters $\theta$ represent the axis-angle representation of the relative rotation between parts
+  Pose parameters $'\theta'$ represent the axis-angle representation of the relative rotation between parts
 + Let $J(\beta)$ be the function that predicts 3D skeleton joint locations from body shape
 + Joints can be put in arbitary poses by applying a global rigid transformation   
   We denote posed 3D joints as $R_\theta(J(\beta)_i)$ for joint *i*, where $R_\theta$ is the global rigid transformation induced by pose $\theta$
@@ -77,7 +77,7 @@ Keep it SMPL : Automatic Estimation of 3D Human Pose and Shape from a Single Ima
 ![image](https://user-images.githubusercontent.com/54238662/94799912-d4c2d380-041e-11eb-8618-3b2a0d2dd21d.png)
 + Advantage of our 3D shape model is that it allows us to detect and prevent interpenetration between body parts
 + We use proxy geometries to compute collisions and approximate the body surface as a set of **capsules**
-+ We train regressor from model shape parameters to capsule parameters(axis length, radius), and pose the capsules according to $R_\theta$, the rotation induced by the kinematic chain
++ We train regressor from model shape parameters to capsule parameters(axis length, radius), and pose the capsules according to $'R_\theta'$, the rotation induced by the kinematic chain
 1. Start from capsules manually attached to body joints in the template
 2. Perform gradient-based optimization of their radii and axis lengths to minimize the bidirectional distance between capsules and body surfaces
 3. Learn a linear regressor from body shape coefficients($\beta$) to the capsules'radii and axis lengths using cross-validated ridge regression
