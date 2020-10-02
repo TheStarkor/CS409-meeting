@@ -1,5 +1,3 @@
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
 Keep it SMPL : Automatic Estimation of 3D Human Pose and Shape from a Single Image   
 =====
 [Link](https://arxiv.org/abs/1607.08128)
@@ -64,9 +62,10 @@ Keep it SMPL : Automatic Estimation of 3D Human Pose and Shape from a Single Ima
 2. Use DeepCut CNN to predict 2D body joint (J<sub>est</sub>)
 3. For each 2D joint *i*, the CNN provides a confidence value, w<sub>i</sub>
 4. Fit 3D body model such that the projected joints of the model minimize a robust weighted error term
-+ The body model is defined as a function 
-  $$M(\beta, \theta, \gamma)$$
-  $$\beta : shape\,parameter, \theta : pose\,parameter, \gamma : translation\, parameter$$   
++ The body model is defined as a function     
+  <p align = "center"><image src = "https://user-images.githubusercontent.com/54238662/94888629-b7404900-04b4-11eb-9fda-eda0d3c90fe8.png">   
+  <p align = "center"><image src = "https://user-images.githubusercontent.com/54238662/94888649-c8895580-04b4-11eb-9b36-de64f8b33e20.png">   
+  
   The output is a triangulated surface with 6890 vertices
 + Shape parameters $\beta$ are coefficients of a low-dimensional shape space, learned from a training set of thousands of registered scans
 + The pose of body is defined by a skeleton rig with 23 joints   
