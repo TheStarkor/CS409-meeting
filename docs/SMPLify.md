@@ -1,3 +1,5 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 Keep it SMPL : Automatic Estimation of 3D Human Pose and Shape from a Single Image   
 =====
 [Link](https://arxiv.org/abs/1607.08128)
@@ -63,12 +65,12 @@ Keep it SMPL : Automatic Estimation of 3D Human Pose and Shape from a Single Ima
 3. For each 2D joint *i*, the CNN provides a confidence value, w<sub>i</sub>
 4. Fit 3D body model such that the projected joints of the model minimize a robust weighted error term
 + The body model is defined as a function 
-  $$'''M(\beta, \theta, \gamma)'''$$
-  $$'''\beta : shape\,parameter, \theta : pose\,parameter, \gamma : translation\, parameter'''$$   
+  $$M(\beta, \theta, \gamma)$$
+  $$\beta : shape\,parameter, \theta : pose\,parameter, \gamma : translation\, parameter$$   
   The output is a triangulated surface with 6890 vertices
-+ Shape parameters $'\beta'$ are coefficients of a low-dimensional shape space, learned from a training set of thousands of registered scans
++ Shape parameters $\beta$ are coefficients of a low-dimensional shape space, learned from a training set of thousands of registered scans
 + The pose of body is defined by a skeleton rig with 23 joints   
-  Pose parameters $'\theta'$ represent the axis-angle representation of the relative rotation between parts
+  Pose parameters $\theta$ represent the axis-angle representation of the relative rotation between parts
 + Let $J(\beta)$ be the function that predicts 3D skeleton joint locations from body shape
 + Joints can be put in arbitary poses by applying a global rigid transformation   
   We denote posed 3D joints as $R_\theta(J(\beta)_i)$ for joint *i*, where $R_\theta$ is the global rigid transformation induced by pose $\theta$
