@@ -4,6 +4,7 @@
 - [WEEK3](https://github.com/TheStarkor/CS409-meeting/tree/master/docs/week3)
     - SPIN paper review, SPIN demo
 - [WEEK4](https://github.com/TheStarkor/CS409-meeting/tree/master/docs/week4)
+    - HMR, SMPLify paper review, weak-label dataset
 
 ## Results
 

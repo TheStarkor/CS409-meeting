@@ -6,5 +6,8 @@
 - human 3.6m 데이터셋 받기
 
 ## Result
+- [HMR paper](https://github.com/TheStarkor/CS409-meeting/blob/master/docs/HMR.md)
+- [SMPLify paper](https://github.com/TheStarkor/CS409-meeting/blob/master/docs/SMPLify.md)
+- [weak-label YOLO+DeepSort]()
 
 ## Review

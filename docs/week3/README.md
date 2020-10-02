@@ -4,7 +4,7 @@
 - Human 3.6M dataset 받기
 
 ## Result
-- [SPIN paper]()
+- [SPIN paper](https://github.com/TheStarkor/CS409-meeting/blob/master/docs/Learning%20to%20reconstruct%203D%20human%20pose%20and%20shape%20via%20model.pdf)
 - [SPIN demo](https://github.com/TheStarkor/CS409-meeting/blob/master/docs/run_SPIN.md)
 - dataset 요청 보내 둔 상태
 
