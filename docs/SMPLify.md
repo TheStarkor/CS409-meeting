@@ -65,44 +65,45 @@ Keep it SMPL : Automatic Estimation of 3D Human Pose and Shape from a Single Ima
 + The body model is defined as a function     
   <p align = "center"><image src = "https://user-images.githubusercontent.com/54238662/94888629-b7404900-04b4-11eb-9fda-eda0d3c90fe8.png">   
   <p align = "center"><image src = "https://user-images.githubusercontent.com/54238662/94888649-c8895580-04b4-11eb-9b36-de64f8b33e20.png">   
+
   
   The output is a triangulated surface with 6890 vertices
-+ Shape parameters $\beta$ are coefficients of a low-dimensional shape space, learned from a training set of thousands of registered scans
++ Shape parameters <image src = "https://user-images.githubusercontent.com/54238662/94889684-063bad80-04b8-11eb-887a-22b3a5efae04.png"> are coefficients of a low-dimensional shape space, learned from a training set of thousands of registered scans
 + The pose of body is defined by a skeleton rig with 23 joints   
-  Pose parameters $\theta$ represent the axis-angle representation of the relative rotation between parts
-+ Let $J(\beta)$ be the function that predicts 3D skeleton joint locations from body shape
+  Pose parameters <image src = "https://user-images.githubusercontent.com/54238662/94889711-1eabc800-04b8-11eb-8169-0af48bca84be.png"> represent the axis-angle representation of the relative rotation between parts
++ Let <image src = "https://user-images.githubusercontent.com/54238662/94889746-3420f200-04b8-11eb-9a2a-5e4b9620e77d.png"> be the function that predicts 3D skeleton joint locations from body shape
 + Joints can be put in arbitary poses by applying a global rigid transformation   
-  We denote posed 3D joints as $R_\theta(J(\beta)_i)$ for joint *i*, where $R_\theta$ is the global rigid transformation induced by pose $\theta$
+  We denote posed 3D joints as <image src = "https://user-images.githubusercontent.com/54238662/94889891-ac87b300-04b8-11eb-8e53-2e82a1e5e90e.png"> for joint *i*, where <iamge src = "https://user-images.githubusercontent.com/54238662/94889928-c628fa80-04b8-11eb-92e4-525f1ea87a07.png"> is the global rigid transformation induced by pose <image src = "https://user-images.githubusercontent.com/54238662/94889711-1eabc800-04b8-11eb-8169-0af48bca84be.png">
 + To project SMPL joints into the image we use a perspective camera model, defined by parameters K
 ## Approximating bodies with capsules
 ![image](https://user-images.githubusercontent.com/54238662/94799912-d4c2d380-041e-11eb-8618-3b2a0d2dd21d.png)
 + Advantage of our 3D shape model is that it allows us to detect and prevent interpenetration between body parts
 + We use proxy geometries to compute collisions and approximate the body surface as a set of **capsules**
-+ We train regressor from model shape parameters to capsule parameters(axis length, radius), and pose the capsules according to $'R_\theta'$, the rotation induced by the kinematic chain
++ We train regressor from model shape parameters to capsule parameters(axis length, radius), and pose the capsules according to '<image src = "https://user-images.githubusercontent.com/54238662/94889928-c628fa80-04b8-11eb-92e4-525f1ea87a07.png">', the rotation induced by the kinematic chain
 1. Start from capsules manually attached to body joints in the template
 2. Perform gradient-based optimization of their radii and axis lengths to minimize the bidirectional distance between capsules and body surfaces
-3. Learn a linear regressor from body shape coefficients($\beta$) to the capsules'radii and axis lengths using cross-validated ridge regression
+3. Learn a linear regressor from body shape coefficients(<image src = "https://user-images.githubusercontent.com/54238662/94889684-063bad80-04b8-11eb-887a-22b3a5efae04.png">) to the capsules'radii and axis lengths using cross-validated ridge regression
 4. Once the regressor is trained, the procedure is iterated once more, initializeing the capsules with the regressor output
 ## Objective function
 + Sum of five error terms   
   A joint-based data term, three pose priors, and a shape prior
-$$ E(\beta, \theta) = E_J(\beta, \theta; K, J_{est}) + \lambda_\theta E_\theta(\theta) + \lambda_a E_a(\theta) +\lambda_{sp} E_{sp}(\theta;\beta)+\lambda_\beta E_\beta(\beta) $$
-$$ K\,:\,camera\,parameters,\, \lambda\,:\,scalar\,weights $$
-**자세한 수식 생략**
+  <p align = "center"><image src = "https://user-images.githubusercontent.com/54238662/94889439-2b7bec00-04b7-11eb-8a2f-5097cbc72747.png">   
+  <p align = "center"><image src = "https://user-images.githubusercontent.com/54238662/94889449-346cbd80-04b7-11eb-8f4d-b93541930889.png">
+**Detailed equation skipped temporary**
 ## Optimization
 + Assume that camera translation and body orientation are unknown   
 + Require that the camera focal length or its rough estimate is known
 + Initialize camera translation by assuming that the person is standing parallel to the image plane
 + Estimate the depth via the ratio of similar triangles defined by the torso length of the mean SMPL shape and the predicted 2D joints
-+ Since this assumption is not always true, we further refine this estimate by minimizing $E_J$ over the torso joints alone with respect to camera translation and body orientation
-+ Keep $\beta$ fixed to the mean shape during this orientation
++ Since this assumption is not always true, we further refine this estimate by minimizing E<sub>J</sub> over the torso joints alone with respect to camera translation and body orientation
++ Keep <image src = "https://user-images.githubusercontent.com/54238662/94889684-063bad80-04b8-11eb-887a-22b3a5efae04.png"> fixed to the mean shape during this orientation
 + Don't optimize focal length since the problem is too unconstrainted to optimize it together with translation
 + After estimating camera tranaslation, we fit our model by minimizing objective function in a staged approach
 + When the subject is captured in a side view, assessing in which direction the body is facing might be ambiguous   
 + To address this, we try two initializations when the 2D distance between the CNN-estimated 2D shoulder joints is below a threshold
   + With body orientation estimated as above
   + With that orientation rotated by 180 degrees
-+ Finally pick the fit with lowest $E_J$
++ Finally pick the fit with lowest E<sub>J</sub>
 # Evalutation
 + Evaluate accuracy of both 3D pose and 3D shape estimation
   + 3D pose
