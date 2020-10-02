@@ -5,6 +5,8 @@
     - SPIN paper review, SPIN demo
 - [WEEK4](https://github.com/TheStarkor/CS409-meeting/tree/master/docs/week4)
     - HMR, SMPLify paper review, weak-label dataset
+- [WEEK5](https://github.com/TheStarkor/CS409-meeting/tree/master/docs/week5)
+    - SPIN training, data labeling
 
 ## Results
 
