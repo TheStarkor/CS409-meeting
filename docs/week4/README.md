@@ -8,6 +8,16 @@
 ## Result
 - [HMR paper](https://github.com/TheStarkor/CS409-meeting/blob/master/docs/HMR.md)
 - [SMPLify paper](https://github.com/TheStarkor/CS409-meeting/blob/master/docs/SMPLify.md)
-- [weak-label YOLO+DeepSort]()
+- [Data pre-processing]()
+- [MuVS paper]()
 
 ## Review
+### SPIN
+- mpi, coco 등 dataset 참고해서 마네킹 dataset 해당 방식으로 만들어두기
+    - 시각화 해서 정확도 확인하며 진행
+- 기존 데이터셋 활용해서 학습 과정 확인해두기
+    - tensorboard 확인하면 되겠지
+
+### multi-view contraint?
+- PA MPJPE 써보는 것은 어떨까?
+- 잘 안되면 [MuVS](https://github.com/YinghaoHuang91/MuVS) 방식 응용해보는 것도 좋을 것 같음
