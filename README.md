@@ -1,11 +1,12 @@
 # outdoor-3d-pose
 
 ## Documents
-- [WEEK3](https://github.com/TheStarkor/CS409-meeting/tree/master/docs/week3)
+- [WEEK3 Proposal Presentation](https://github.com/TheStarkor/CS409-meeting/blob/master/presentation/proposal_presentation_team1.pdf)
+- [WEEK4](https://github.com/TheStarkor/CS409-meeting/tree/master/docs/week3)
     - SPIN paper review, SPIN demo
-- [WEEK4](https://github.com/TheStarkor/CS409-meeting/tree/master/docs/week4)
+- [WEEK5](https://github.com/TheStarkor/CS409-meeting/tree/master/docs/week4)
     - HMR, SMPLify paper review, weak-label dataset
-- [WEEK5](https://github.com/TheStarkor/CS409-meeting/tree/master/docs/week5)
+- [WEEK6](https://github.com/TheStarkor/CS409-meeting/tree/master/docs/week5)
     - SPIN training, data labeling
 
 ## Results
