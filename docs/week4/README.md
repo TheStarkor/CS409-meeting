@@ -1,23 +1,27 @@
 ## TODO
-- SPIN training code 돌려서 조금 더 자세한 구조 알아보기
-- HMR, SMPLify, VIBE, SPIN 숙지하기
-- 데이터 전처리 방식 고안 및 loss 만들어보기
-    - 일단 마네킹 챌린지 영상이면 같은 사람 파악하기(weak-label)
-- human 3.6m 데이터셋 받기
+- 환경설정 및 SPIN 데모
+- SPIN paper 및 3d pose 분야 이해
+- Human 3.6M dataset 받기
 
 ## Result
-- [HMR paper](https://github.com/TheStarkor/CS409-meeting/blob/master/docs/HMR.md)
-- [SMPLify paper](https://github.com/TheStarkor/CS409-meeting/blob/master/docs/SMPLify.md)
-- [Data pre-processing](https://github.com/TheStarkor/CS409-meeting/blob/master/docs/data_preprocessing_old.md)
-- [MuVS paper]()
+- [SPIN paper](https://github.com/TheStarkor/CS409-meeting/blob/master/docs/Learning%20to%20reconstruct%203D%20human%20pose%20and%20shape%20via%20model.pdf)
+- [SPIN demo](https://github.com/TheStarkor/CS409-meeting/blob/master/docs/run_SPIN.md)
+- dataset 요청 보내 둔 상태
 
 ## Review
-### SPIN
-- mpi, coco 등 dataset 참고해서 마네킹 dataset 해당 방식으로 만들어두기
-    - 시각화 해서 정확도 확인하며 진행
-- 기존 데이터셋 활용해서 학습 과정 확인해두기
-    - tensorboard 확인하면 되겠지
+- metric, loss 좀 더 이해하면 좋지 않을까?
+- SPIN 구현해볼까 했는데 그러지 말고 다음 task 를 하는 것이 좋을 것 같음
+- HMR, SMPLify 는 더 자세하게 이해해보자
 
-### multi-view contraint?
-- PA MPJPE 써보는 것은 어떨까?
-- 잘 안되면 [MuVS](https://github.com/YinghaoHuang91/MuVS) 방식 응용해보는 것도 좋을 것 같음
+### SPIN처럼 mesh를 직접 만드는 이유?
+- SMPL GT 가 없고 부정확해서 기존 방식처럼 loss를 구할 수 없음
+- 따라서 smpl 파라미터에 맞추고 이를 GT로 사용함
+
+### SMPL 파라미터
+- 간소화된 카메라 파라미터 + 체형, 남녀 파라미터 + joint 파라미터
+- 중요한건 joint 이고 hip 만 맞추면 나머지는 다 같아짐
+    - 3D 상황에서 이 값을 loss 에 활용해서 정교하게 맞출 수 있을텐데 어떻게 할지?
+
+### dataset
+- 직접 라벨링 해서 쓰기보다는 weakly supervised -> multi-view constraints 방식으로 가는게 좋지 않을까?
+- 최종 평가를 위해서는 GT를 만들거나 weakly supervised 방식의 metric 을 알아두어야 한다.
