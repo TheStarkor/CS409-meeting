@@ -13,7 +13,10 @@ SMPL parameter
 + has_smpl : existence of smpl(T/F)   
 
 openpose parameter
-+ openpose : [body part position 2, confidence value 1] 
++ openpose : [body part position 2, confidence value 1]    
+  x, y be normalized to range [0,1], [-1,1], [0,source size], [0, output size] depending on the flag keypoint_scale   
+  while c is confidence score in the range [0,1]   
+  
      {0,  "Nose"},
      {1,  "Neck"},
      {2,  "RShoulder"},
