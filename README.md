@@ -5,7 +5,7 @@
 - [WEEK4](https://github.com/TheStarkor/CS409-meeting/tree/master/docs/week4): SPIN paper review, SPIN demo
 - [WEEK5](https://github.com/TheStarkor/CS409-meeting/tree/master/docs/week5): HMR, SMPLify paper review, weak-label dataset
 - [WEEK6](https://github.com/TheStarkor/CS409-meeting/tree/master/docs/week6): SPIN input data, openpose, human3.6m
-- [WEEK7](): **Mid Presentation**
+- [WEEK7](https://github.com/TheStarkor/CS409-meeting/blob/master/presentation/mid_presentation_team1.pdf): **Mid Presentation**
 
 ## Results
 
